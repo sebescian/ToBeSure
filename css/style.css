@@ -1,0 +1,162 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: url("/assets/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ticketForm {
+  background-color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+#ticketForm .wrapper {
+  display: grid;
+  grid-area: "numeTitlu numeTitlu" "nume" "prenume" "numeInput" "prenumeInput";
+}
+#ticketForm hr {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+#ticketForm #logo {
+  height: 10rem;
+  margin-bottom: 3rem;
+}
+#ticketForm h1 {
+  padding-bottom: 2rem;
+}
+#ticketForm input {
+  padding: 15px 10px;
+  margin-bottom: 1rem;
+  width: 20rem;
+  border: 1px solid rgba(0, 0, 0, 0.25);
+  border-radius: 0.5rem;
+  outline: none;
+}
+#ticketForm input:focus {
+  border: 1px solid #0477bf;
+}
+#ticketForm p {
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+#ticketForm p.fieldTitle {
+  font-weight: bold;
+}
+#ticketForm #existingUser {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+#ticketForm #existingUser a {
+  color: #0477bf;
+  font-weight: bold;
+  text-decoration: none;
+}
+#ticketForm button {
+  width: 20rem;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 2rem;
+  padding: 15px 10px;
+  background-color: #0477bf;
+  border: 0px;
+  border-radius: 0.5rem;
+  color: #fff;
+}
+
+.tabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 680px;
+  height: 360px;
+  padding: 30px 20px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.tabs .tab-header {
+  float: left;
+  width: 180px;
+  height: 70%;
+  border-right: 1px solid rgba(0, 0, 0, 0.25);
+  padding: 10% 0px;
+}
+.tabs .tab-header > div {
+  height: 5rem;
+  line-height: 50px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: rgba(0, 0, 0, 0.5);
+}
+.tabs .tab-header > div.active {
+  color: #f2a341;
+}
+.tabs .tab-header > div i {
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 5px;
+}
+.tabs .tab-header .menuOption:hover {
+  color: #f2a341;
+}
+.tabs .tab-content {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+.tabs .tab-content p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.tabs .tab-content > div {
+  position: absolute;
+  text-align: center;
+  padding: 40px 20px;
+  top: -200%;
+}
+.tabs .tab-content > div.active {
+  top: 0px;
+  color: #f2a341;
+}
+.tabs .tab-content > div.active i {
+  font-size: 30px;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: #f2a341;
+  padding: 10px;
+  border: 0;
+  border-radius: 100%;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.tabs .tab-content > div.active h2 {
+  margin-bottom: 40px;
+  color: #f2a341;
+}
+.tabs .tab-content > div.active .plecare p {
+  color: black;
+  padding-bottom: 10px;
+}
+.tabs .tab-content > div.active .plecare select {
+  width: 300px;
+}/*# sourceMappingURL=style.css.map */
