@@ -3,9 +3,10 @@ from flask_login import UserMixin
 from sqlalchemy.sql import func
 
 
-class Note(db.Model):
+class Trip(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    data = db.Column(db.String(10000))
+    start_id = db.Column(db.Integer, db.ForeignKey('location.id'))
+    stop_id = db.Column(db.Integer, db.ForeignKey('location.id'))
     date = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
@@ -15,4 +16,11 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     first_name = db.Column(db.String(150))
-    notes = db.relationship('Note')
+    last_name = db.Column(db.String(150))
+    loc_id = db.Column(db.Integer, db.ForeignKey('loc.id'))
+    trips = db.relationship('Trip')
+
+class Location(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    county = db.Column(db.String(150))
+    city = db.Column(db.String(150))
