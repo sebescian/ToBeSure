@@ -19,7 +19,12 @@ body {
 }
 
 //Sign Up & Sign In Form
-
+.hideContent {
+  display: none;
+}
+.showContent {
+  display: block;
+}
 #ticketForm {
   background-color: #fff;
   border: 0;
@@ -99,8 +104,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 680px;
-  height: 360px;
+  width: 50vw;
+  height: 50vh;
   padding: 30px 20px;
   background-color: #fff;
   border: 0;
@@ -114,13 +119,13 @@ body {
     border-right: 1px solid $grey;
     padding: 10% 0px;
 
-    & > div {
+    & .menuOption {
       height: 5rem;
       line-height: 50px;
       font-size: 16px;
       font-weight: lighter;
       color: $darkgrey;
-      &.active {
+      &.show {
         color: $gold;
       }
 
@@ -138,11 +143,39 @@ body {
   & .tab-content {
     position: relative;
     height: 100%;
-    overflow: hidden;
+    width: 100%;
 
-    & p {
+    & .contentIcon {
+      font-size: 50px;
+      background-color: $gold;
+      color: #fff;
+      padding: 10px;
+      border: 0;
+      border-radius: 10rem;
+      margin-bottom: 10px;
+    }
+  }
+  & p {
+    color: $darkgrey;
+  }
+  & h2 {
+    margin-bottom: 1rem;
+    color: $gold;
+  }
+  & .plecare {
+    p {
+      color: black;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    select {
+      width: 300px;
+      height: 40px;
+      border: 1px solid $darkgrey;
+      border-radius: 0.5rem;
       color: $darkgrey;
     }
+<<<<<<< HEAD:website/static/css/style.scss
 
     & > div {
       position: absolute;
@@ -179,6 +212,43 @@ body {
           }
         }
       }
+=======
+  }
+  & .content {
+    text-align: center;
+    padding: 40px 10px;
+    &.show {
+      display: block;
+    }
+    & button {
+      margin-top: 2rem;
+      background-color: $red;
+      color: #fff;
+      padding: 1rem 0.5rem;
+      border: 0;
+      border-radius: 0.3rem;
+      &:hover {
+        background-color: rgb(221, 2, 2);
+      }
+      & button {
+        width: 8rem;
+        cursor: pointer;
+      }
+    }
+    .contactInfo {
+      display: inline-flex;
+      padding: 0.5rem 0;
+      gap: 20px;
+
+      & button {
+        width: 8rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(221, 2, 2);
+        }
+      }
+>>>>>>> a3a95e32f42c3ee1986110c66cd0d1a5187f75ad:css/style.scss
     }
   }
 }

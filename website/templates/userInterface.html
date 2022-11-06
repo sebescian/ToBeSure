@@ -11,19 +11,19 @@
 <body>
     <div class="tabs">
         <div class="tab-header">
-            <div class="active menuOption">
+            <div class="menuOption show" id="calatorie">
                 <i class="fa fa-plus"></i><span>Calatorie Noua</span>
             </div>
-            <div class="menuOption">
+            <div class="menuOption" id="istoric">
                 <i class="fa fa-history"></i><span>Istoric Calatorii</span>
             </div>
-            <div class="menuOption">
+            <div class="menuOption" id="cont">
                 <i class="fa fa-user"></i><span>Contul Meu</span>
             </div>
         </div>
-        <div class="tab-content">
-            <div class="active">
-                <i class="fa fa-plus"></i>
+        <div class="tab-content show">
+            <div id="calatorieNoua" class="content showContent" >
+                <i class="fa fa-plus contentIcon"></i>
                 <h2>Calatorie noua</h2>
                 <div class="plecare" id="plecare">
                     <p>Plecare</p>
@@ -42,19 +42,24 @@
                             <option value="Cluj-Napoca">Cluj-Napoca</option>
                         </select>
                         <br>
-                        <button type="submit" id="confirmareCalatorie">Confirma calatoria</button>
+                        <button type="submit" id="contectInfo">Confirma calatoria</button>
                     </form>
                 </div>
             </div>
-            <div>
-                <i class="fa fa-history"></i>
+            <div id="istoricCalatorii" class="content hideContent">
+                <i class="fa fa-history contentIcon"></i>
                 <h2>Istoric Calatorii</h2>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea cupiditate iste similique dolorum autem impedit, praesentium ad quaerat nobis molestias quia aspernatur, ut, libero incidunt culpa provident ipsam ullam dicta rem est molestiae commodi delectus. Porro nulla expedita reprehenderit deserunt minima! Adipisci commodi tempora eaque obcaecati harum sequi libero dolorum.</p>
             </div>
-            <div class="active">
-                <i class="fa fa-user"></i>
+            <div id="contulMeu"class="content hideContent">
+                <i class="fa fa-user contentIcon"></i>
                 <h2>Contul meu</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea cupiditate iste similique dolorum autem impedit, praesentium ad quaerat nobis molestias quia aspernatur, ut, libero incidunt culpa provident ipsam ullam dicta rem est molestiae commodi delectus. Porro nulla expedita reprehenderit deserunt minima! Adipisci commodi tempora eaque obcaecati harum sequi libero dolorum.</p>
+                <div class="contactInfo"><h4>Nume Prenume:</h4><span>Ion Popescu</span></div><br>
+                <div class="contactInfo"><h4>Email:</h4><span>ion.popescu@gmail.com</span></div><br>
+                <form class="contactInfo">
+                    <button type="submit" id="resetParola">Resetare Parola</button>
+                    <button type="submit" id="logOut">Log Out</button>
+                 </form>
             </div>
         </div>
     </div>
