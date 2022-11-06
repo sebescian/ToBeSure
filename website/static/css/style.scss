@@ -1,0 +1,229 @@
+@import "_colors";
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: url("static/assets/background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+//Sign Up & Sign In Form
+.hideContent {
+  display: none;
+}
+.showContent {
+  display: block;
+}
+#ticketForm {
+  background-color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  & .wrapper {
+    display: grid;
+    grid-area: "numeTitlu numeTitlu" "nume" "prenume" "numeInput" "prenumeInput";
+  }
+
+  & hr {
+    border-color: $grey;
+  }
+
+  & #logo {
+    height: 10rem;
+    margin-bottom: 3rem;
+  }
+
+  & h1 {
+    padding-bottom: 2rem;
+  }
+
+  & input {
+    padding: 15px 10px;
+    margin-bottom: 1rem;
+    width: 20rem;
+    border: 1px solid $grey;
+    border-radius: 0.5rem;
+    outline: none;
+
+    &:focus {
+      border: 1px solid $babyblue;
+    }
+  }
+  & p {
+    margin-bottom: 0.5rem;
+    text-align: left;
+
+    &.fieldTitle {
+      font-weight: bold;
+    }
+  }
+  #existingUser {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.75rem;
+    & a {
+      color: $babyblue;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  }
+  & button {
+    width: 20rem;
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 15px 10px;
+    background-color: $babyblue;
+    border: 0px;
+    border-radius: 0.5rem;
+    color: #fff;
+  }
+}
+
+// User Interface
+
+.tabs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50vw;
+  height: 50vh;
+  padding: 30px 20px;
+  background-color: #fff;
+  border: 0;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  & .tab-header {
+    float: left;
+    width: 180px;
+    height: 70%;
+    border-right: 1px solid $grey;
+    padding: 10% 0px;
+
+    & .menuOption {
+      height: 5rem;
+      line-height: 50px;
+      font-size: 16px;
+      font-weight: lighter;
+      color: $darkgrey;
+      &.show {
+        color: $gold;
+      }
+
+      & i {
+        display: inline-block;
+        margin-left: 10px;
+        margin-right: 5px;
+      }
+    }
+    & .menuOption:hover {
+      color: $gold;
+    }
+  }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px 2px;
+    width: 20%;
+  }
+
+  & .tab-content {
+    position: relative;
+    height: 100%;
+    width: 100%;
+
+    & .contentIcon {
+      font-size: 50px;
+      background-color: $gold;
+      color: #fff;
+      padding: 10px;
+      border: 0;
+      border-radius: 10rem;
+      margin-bottom: 10px;
+    }
+  }
+  & p {
+    color: $darkgrey;
+  }
+  & h2 {
+    margin-bottom: 1rem;
+    color: $gold;
+  }
+  & .plecare {
+    p {
+      color: black;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    select {
+      width: 300px;
+      height: 40px;
+      border: 1px solid $darkgrey;
+      border-radius: 0.5rem;
+      color: $darkgrey;
+    }
+
+    & > div {
+      position: absolute;
+      text-align: center;
+      padding: 40px 20px;
+      top: -200%;
+
+      &.active {
+        top: 0px;
+        color: $gold;
+        & i {
+          font-size: 30px;
+          text-align: center;
+          width: 30px;
+          height: 30px;
+          background-color: $gold;
+          padding: 10px;
+          border: 0;
+          border-radius: 100%;
+          color: #fff;
+          margin-bottom: 10px;
+        }
+        & h2 {
+          margin-bottom: 40px;
+          color: $gold;
+        }
+        & .plecare {
+          p {
+            color: black;
+            padding-bottom: 10px;
+          }
+          select {
+            width: 300px;
+          }
+        }
+      }
+    }
+  }
+}

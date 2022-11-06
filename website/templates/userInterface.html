@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <title>Title</title>
+</head>
+<body>
+    <div class="tabs">
+        <div class="tab-header">
+            <div class="menuOption show" id="calatorie">
+                <i class="fa fa-plus"></i><span>Calatorie Noua</span>
+            </div>
+            <div class="menuOption" id="istoric">
+                <i class="fa fa-history"></i><span>Istoric Calatorii</span>
+            </div>
+            <div class="menuOption" id="cont">
+                <i class="fa fa-user"></i><span>Contul Meu</span>
+            </div>
+        </div>
+        <div class="tab-content show">
+            <div id="calatorieNoua" class="content showContent" >
+                <i class="fa fa-plus contentIcon"></i>
+                <h2>Calatorie noua</h2>
+                <div class="plecare">
+                    <p>Plecare</p>
+                    <form action="#" method="post">
+                        <select name="" id="inputPlecare" onchange="plecare()" class="contactInfo" class="contactInfo">
+                            <option>Selecteaza Judet</option>
+                            <option>Cluj</option>
+                            <option>Bistrita-Nasaud</option>
+                            <option>Brasov</option>
+                        </select>
+                        <div id="outputPlecare"></div>
+                    </form>
+                </div>
+                <div class="plecare">
+                    <p>Sosire</p>
+                    <form action="#" method="post">
+                        <select name="" id="inputSosire" onchange="sosire()" class="contactInfo">
+                            <option>Selecteaza Judet</option>
+                            <option>Cluj</option>
+                            <option>Bistrita-Nasaud</option>
+                            <option>Brasov</option>
+                        </select>
+                        <div id="outputSosire" class="contactInfo"></div>
+                    </form>
+                        <br>
+                        <button type="submit" name="contectInfo" id="contectInfo">Confirma calatoria</button>
+                    </form>
+                </div>
+            </div>
+            <div id="istoricCalatorii" class="content hideContent">
+                <i class="fa fa-history contentIcon"></i>
+                <h2>Istoric Calatorii</h2>
+                <table>
+                    <tr>
+                      <th>Data</th>
+                      <th>Plecare</th>
+                      <th>Sosire</th>
+                    </tr>
+                    <tr>
+                      <td>01/10/2022</td>
+                      <td>Cluj-Napoca</td>
+                      <td>Bistrita</td>
+                    </tr>
+                    <tr>
+                      <td>03/10/2022</td>
+                      <td>Bistrita</td>
+                      <td>Cluj-Napoca</td>
+                    </tr>
+                    <tr>
+                      <td>30/10/2022</td>
+                      <td>Cluj-Napoca</td>
+                      <td>Brasov</td>
+                    </tr>
+                    <tr>
+                      <td>01/11/2022</td>
+                      <td>Brasov</td>
+                      <td>Cluj-Napoca</td>
+                    </tr>
+                  </table>
+            </div>
+            <div id="contulMeu"class="content hideContent">
+                <i class="fa fa-user contentIcon"></i>
+                <h2>Contul meu</h2>
+                <div class="contactInfo"><h4>Nume Prenume:</h4><span>Ion Popescu</span></div><br>
+                <div class="contactInfo"><h4>Email:</h4><span>ion.popescu@gmail.com</span></div><br>
+                <form class="contactInfo">
+                    <button type="submit" id="resetParola">Resetare Parola</button>
+                    <button><a href={{url_for('auth.logout')}}>Log Out</a></button>
+                 </form>
+            </div>
+        </div>
+    </div>
+    <script src="../static/index.js"></script>
+</body>
+</html>
