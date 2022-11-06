@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, request, flash, jsonify
+from flask import Blueprint, render_template, request, flash, jsonify, url_for, redirect
 from flask_login import login_required, current_user, login_manager
 from .models import Trip, Location
 from . import db
@@ -16,8 +16,10 @@ def home():
         plecare_judet = request.form.get('plecare_judet')
         plecare_id = Location.query.filter_by(city = plecare_oras, county= plecare_judet)
         new_trip = Trip(start_id =plecare_id, stop_id = sosire_id)
-        db.session.add(new_trip)
-        db.session.commit()
+        conetct_info = request.form.get('contectInfo')
+        if conetct_info:
+            db.session.add(new_trip)
+            db.session.commit()
 
     return render_template("userInterface.html", user=current_user)
 
