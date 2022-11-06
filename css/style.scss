@@ -180,10 +180,11 @@ body {
       padding-bottom: 10px;
       padding-top: 10px;
     }
-    select {
+    input {
       width: 300px;
-      height: 40px;
+      height: 2rem;
       border: 1px solid $darkgrey;
+      margin-bottom: 0.5rem;
       border-radius: 0.5rem;
       color: $darkgrey;
     }
@@ -211,7 +212,8 @@ body {
     }
     .contactInfo {
       display: inline-flex;
-      padding: 0.5rem 0;
+      padding: 0.2rem 0;
+      margin-bottom: 10px;
       gap: 20px;
 
       & button {

@@ -28,19 +28,26 @@
                 <div class="plecare">
                     <p>Plecare</p>
                     <form action="#" method="post">
-                        <select name="plecare" id="plecare">
-                            <option value="Dej">Dej</option>
-                            <option value="Cluj-Napoca">Cluj-Napoca</option>
+                        <select name="" id="inputPlecare" onchange="plecare()" class="contactInfo" class="contactInfo">
+                            <option>Selecteaza Judet</option>
+                            <option>Cluj</option>
+                            <option>Bistrita-Nasaud</option>
+                            <option>Brasov</option>
                         </select>
+                        <div id="outputPlecare"></div>
                     </form>
                 </div>
                 <div class="plecare">
                     <p>Sosire</p>
                     <form action="#" method="post">
-                        <select name="plecare" id="sosire">
-                            <option value="Dej">Dej</option>
-                            <option value="Cluj-Napoca">Cluj-Napoca</option>
+                        <select name="" id="inputSosire" onchange="sosire()" class="contactInfo">
+                            <option>Selecteaza Judet</option>
+                            <option>Cluj</option>
+                            <option>Bistrita-Nasaud</option>
+                            <option>Brasov</option>
                         </select>
+                        <div id="outputSosire" class="contactInfo"></div>
+                    </form>
                         <br>
                         <button type="submit" id="contectInfo">Confirma calatoria</button>
                     </form>

@@ -25,3 +25,49 @@ document.getElementById("istoricCalatorii").classList.replace("showContent", "hi
 document.getElementById("calatorieNoua").classList.replace("showContent", "hideContent")
 });
 
+function plecare() {
+    var county = document.getElementById("inputPlecare").value;
+    if (county === "Brasov") {
+        var array = ["Brasov", "Bran", "Zarnesti", "Sacele", "Fagaras", "Rasnov"]
+        }
+        else if (county === "Bistrita-Nasaud"){
+        var array = ["Bistrita", "Beclean", "Colibita", "Nasaud", "Saratel", "Coldau"]
+        }
+        else if (county === "Cluj"){
+        var array = ["Cluj-Napoca", "Gherla", "Dej", "Apahida", "Jucu", "Bontida"]
+       }
+       else {
+        var array = [];
+       }
+
+   var string = "";
+   for (i = 0; i < array.length; i++) {
+    string = string+ "<option>"+array[i]+"</option>";
+   }
+   string="<select name='city'>"+string+"</>";
+   document.getElementById("outputPlecare").innerHTML=string;
+}
+function sosire() {
+    var county = document.getElementById("inputSosire").value;
+    if (county === "Brasov") {
+    var array = ["Brasov", "Bran", "Zarnesti", "Sacele", "Fagaras", "Rasnov"]
+    }
+    else if (county === "Bistrita-Nasaud"){
+    var array = ["Bistrita", "Beclean", "Colibita", "Nasaud", "Saratel", "Coldau"]
+    }
+    else if (county === "Cluj"){
+    var array = ["Cluj-Napoca", "Gherla", "Dej", "Apahida", "Jucu", "Bontida"]
+   }
+   else {
+    var array=[""];
+   }
+
+   var string = "";
+   for (i = 0; i < array.length; i++) {
+    string = string+ "<option>"+array[i]+"</option>";
+   }
+   string="<select name='city'>"+string+"</>";
+   document.getElementById("outputSosire").innerHTML=string;
+}
+
+
