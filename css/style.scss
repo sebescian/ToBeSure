@@ -139,6 +139,19 @@ body {
       color: $gold;
     }
   }
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+
+  td,
+  th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 5px 2px;
+    width: 20%;
+  }
 
   & .tab-content {
     height: 100%;

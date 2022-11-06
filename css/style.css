@@ -128,6 +128,18 @@ body {
 .tabs .tab-header .menuOption:hover {
   color: #f2a341;
 }
+.tabs table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+.tabs td,
+.tabs th {
+  border-bottom: 1px solid #dddddd;
+  text-align: left;
+  padding: 5px 2px;
+  width: 20%;
+}
 .tabs .tab-content {
   height: 100%;
   width: 100%;
