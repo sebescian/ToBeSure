@@ -18,7 +18,12 @@ body {
 }
 
 //Sign Up & Sign In Form
-
+.hideContent {
+  display: none;
+}
+.showContent {
+  display: block;
+}
 #ticketForm {
   background-color: #fff;
   border: 0;
@@ -114,13 +119,13 @@ body {
     border-right: 1px solid $grey;
     padding: 10% 0px;
 
-    & > div {
+    & .menuOption {
       height: 5rem;
       line-height: 50px;
       font-size: 16px;
       font-weight: lighter;
       color: $darkgrey;
-      &.active {
+      &.show {
         color: $gold;
       }
 
@@ -137,54 +142,72 @@ body {
 
   & .tab-content {
     height: 100%;
-    overflow: hidden;
+    width: 100%;
 
-    & p {
+    & .contentIcon {
+      font-size: 50px;
+      background-color: $gold;
+      color: #fff;
+      padding: 10px;
+      border: 0;
+      border-radius: 10rem;
+      margin-bottom: 10px;
+    }
+  }
+  & p {
+    color: $darkgrey;
+  }
+  & h2 {
+    margin-bottom: 1rem;
+    color: $gold;
+  }
+  & .plecare {
+    p {
+      color: black;
+      padding-bottom: 10px;
+      padding-top: 10px;
+    }
+    select {
+      width: 300px;
+      height: 40px;
+      border: 1px solid $darkgrey;
+      border-radius: 0.5rem;
       color: $darkgrey;
     }
-
-    & > div {
-      position: relative;
-      text-align: center;
-      padding: 40px 10px;
-      top: -200%;
-
-      &.active {
-        top: 0px;
-        color: $gold;
-        & i {
-          font-size: 30px;
-          width: 30px;
-          height: 30px;
-          background-color: $gold;
-          padding: 10px;
-          border: 0;
-          border-radius: 100%;
-          color: #fff;
-          margin-bottom: 10px;
-        }
-        & h2 {
-          margin-bottom: 40px;
-          color: $gold;
-        }
-        & .plecare {
-          p {
-            color: black;
-            padding-bottom: 10px;
-            padding-top: 10px;
-          }
-          select {
-            width: 300px;
-          }
-        }
+  }
+  & .content {
+    text-align: center;
+    padding: 40px 10px;
+    &.show {
+      display: block;
+    }
+    & button {
+      margin-top: 2rem;
+      background-color: $red;
+      color: #fff;
+      padding: 1rem 0.5rem;
+      border: 0;
+      border-radius: 0.3rem;
+      &:hover {
+        background-color: rgb(221, 2, 2);
       }
       & button {
-        margin-top: 1rem;
-        background-color: $red;
-        color: #fff;
-        padding: 0.5rem;
-        border: 0;
-        border-radius: 0.3rem;
+        width: 8rem;
+        cursor: pointer;
+      }
+    }
+    .contactInfo {
+      display: inline-flex;
+      padding: 0.5rem 0;
+      gap: 20px;
+
+      & button {
+        width: 8rem;
+        cursor: pointer;
+
+        &:hover {
+          background-color: rgb(221, 2, 2);
+        }
       }
     }
   }
