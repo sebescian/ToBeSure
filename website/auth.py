@@ -27,11 +27,11 @@ def login():
     return render_template("signIn.html", user=current_user)
 
 
-# @auth.route('/logout')
-# @login_required
-# def logout():
-#     logout_user()
-#     return redirect(url_for('auth.login'))
+@auth.route('/logout')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('auth.login'))
 
 
 @auth.route('/sign_up', methods=['GET', 'POST'])
@@ -43,7 +43,7 @@ def sign_up():
         password = request.form.get('password')
         city = request.form.get('city')
         county = request.form.get('county')
-        loc_id = Location.query.filter_by(city=city, county=county).id
+
         user = User.query.filter_by(email=email).first()
         if user:
             flash('Email already exists.', category='error')
@@ -58,7 +58,8 @@ def sign_up():
                 email=email, 
                 first_name=first_name, 
                 password=generate_password_hash(password, method='sha256'), 
-                loc_id = loc_id, 
+                city=city,
+                county=county, 
                 last_name = last_name)
             db.session.add(new_user)
             db.session.commit()
