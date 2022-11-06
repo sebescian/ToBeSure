@@ -156,7 +156,16 @@ body {
 .tabs .tab-content > div.active .plecare p {
   color: black;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 .tabs .tab-content > div.active .plecare select {
   width: 300px;
+}
+.tabs .tab-content > div button {
+  margin-top: 1rem;
+  background-color: #f24b26;
+  color: #fff;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.3rem;
 }/*# sourceMappingURL=style.css.map */

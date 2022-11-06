@@ -172,11 +172,20 @@ body {
           p {
             color: black;
             padding-bottom: 10px;
+            padding-top: 10px;
           }
           select {
             width: 300px;
           }
         }
+      }
+      & button {
+        margin-top: 1rem;
+        background-color: $red;
+        color: #fff;
+        padding: 0.5rem;
+        border: 0;
+        border-radius: 0.3rem;
       }
     }
   }
