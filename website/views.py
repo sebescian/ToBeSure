@@ -11,7 +11,7 @@ def home():
     if request.method == 'POST':
         sosire_oras = request.form.get('sosire_oras')
         sosire_judet = request.form.get('sosire_judet')
-        sosire_id = Location.query.filter_by(city = sosire_oras, county= sosire_judet).first().get_id()
+        sosire_id = Location.query.filter_by(city = sosire_oras, county= sosire_judet).first()
         plecare_oras = request.form.get('plecare_oras')
         plecare_judet = request.form.get('plecare_judet')
         plecare_id = Location.query.filter_by(city = plecare_oras, county= plecare_judet)
