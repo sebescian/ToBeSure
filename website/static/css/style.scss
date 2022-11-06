@@ -12,10 +12,14 @@ html {
 
 body {
   height: 100%;
+<<<<<<< HEAD:website/static/css/style.scss
   background: url("static/assets/background.jpg") no-repeat;
   background-size: cover;
+=======
+  background: url("/assets/background.jpg") no-repeat;
+  background-attachment: fixed;
+>>>>>>> 13f54cf38fe587dfa54b2daa9ff92b4c2263f221:css/style.scss
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 //Sign Up & Sign In Form
@@ -110,8 +114,7 @@ body {
   flex-direction: row;
 
   & .tab-header {
-    float: left;
-    width: 180px;
+    min-width: 200px;
     height: 70%;
     border-right: 1px solid $grey;
     padding: 10% 0px;
@@ -146,9 +149,9 @@ body {
     }
 
     & > div {
-      position: absolute;
+      position: relative;
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px 10px;
       top: -200%;
 
       &.active {
@@ -173,11 +176,20 @@ body {
           p {
             color: black;
             padding-bottom: 10px;
+            padding-top: 10px;
           }
           select {
             width: 300px;
           }
         }
+      }
+      & button {
+        margin-top: 1rem;
+        background-color: $red;
+        color: #fff;
+        padding: 0.5rem;
+        border: 0;
+        border-radius: 0.3rem;
       }
     }
   }

@@ -12,9 +12,8 @@ html {
 body {
   height: 100%;
   background: url("../assets/background.jpg") no-repeat;
-  background-size: cover;
+  background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
 }
 
 #ticketForm {
@@ -98,8 +97,7 @@ body {
   flex-direction: row;
 }
 .tabs .tab-header {
-  float: left;
-  width: 180px;
+  min-width: 200px;
   height: 70%;
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   padding: 10% 0px;
@@ -130,9 +128,9 @@ body {
   color: rgba(0, 0, 0, 0.5);
 }
 .tabs .tab-content > div {
-  position: absolute;
+  position: relative;
   text-align: center;
-  padding: 40px 20px;
+  padding: 40px 10px;
   top: -200%;
 }
 .tabs .tab-content > div.active {
@@ -157,7 +155,16 @@ body {
 .tabs .tab-content > div.active .plecare p {
   color: black;
   padding-bottom: 10px;
+  padding-top: 10px;
 }
 .tabs .tab-content > div.active .plecare select {
   width: 300px;
+}
+.tabs .tab-content > div button {
+  margin-top: 1rem;
+  background-color: #f24b26;
+  color: #fff;
+  padding: 0.5rem;
+  border: 0;
+  border-radius: 0.3rem;
 }/*# sourceMappingURL=style.css.map */
