@@ -1,5 +1,4 @@
-@import "_colors";
-
+@import "./_variables/colors";
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +7,7 @@
 
 html {
   height: 100%;
+  width: auto;
 }
 
 body {
@@ -106,6 +106,8 @@ body {
   border: 0;
   border-radius: 1rem;
   overflow: hidden;
+  display: flex;
+  flex-direction: row;
 
   & .tab-header {
     float: left;
@@ -136,7 +138,6 @@ body {
   }
 
   & .tab-content {
-    position: relative;
     height: 100%;
     overflow: hidden;
 
@@ -155,7 +156,6 @@ body {
         color: $gold;
         & i {
           font-size: 30px;
-          text-align: center;
           width: 30px;
           height: 30px;
           background-color: $gold;
