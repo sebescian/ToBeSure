@@ -16,6 +16,14 @@ body {
   background-position: center;
 }
 
+.hideContent {
+  display: none;
+}
+
+.showContent {
+  display: block;
+}
+
 #ticketForm {
   background-color: #fff;
   border: 0;
@@ -86,8 +94,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 680px;
-  height: 360px;
+  width: 50vw;
+  height: 50vh;
   padding: 30px 20px;
   background-color: #fff;
   border: 0;
@@ -102,17 +110,17 @@ body {
   border-right: 1px solid rgba(0, 0, 0, 0.25);
   padding: 10% 0px;
 }
-.tabs .tab-header > div {
+.tabs .tab-header .menuOption {
   height: 5rem;
   line-height: 50px;
   font-size: 16px;
   font-weight: lighter;
   color: rgba(0, 0, 0, 0.5);
 }
-.tabs .tab-header > div.active {
+.tabs .tab-header .menuOption.show {
   color: #f2a341;
 }
-.tabs .tab-header > div i {
+.tabs .tab-header .menuOption i {
   display: inline-block;
   margin-left: 10px;
   margin-right: 5px;
@@ -122,49 +130,67 @@ body {
 }
 .tabs .tab-content {
   height: 100%;
-  overflow: hidden;
+  width: 100%;
 }
-.tabs .tab-content p {
-  color: rgba(0, 0, 0, 0.5);
-}
-.tabs .tab-content > div {
-  position: relative;
-  text-align: center;
-  padding: 40px 10px;
-  top: -200%;
-}
-.tabs .tab-content > div.active {
-  top: 0px;
-  color: #f2a341;
-}
-.tabs .tab-content > div.active i {
-  font-size: 30px;
-  width: 30px;
-  height: 30px;
+.tabs .tab-content .contentIcon {
+  font-size: 50px;
   background-color: #f2a341;
+  color: #fff;
   padding: 10px;
   border: 0;
-  border-radius: 100%;
-  color: #fff;
+  border-radius: 10rem;
   margin-bottom: 10px;
 }
-.tabs .tab-content > div.active h2 {
-  margin-bottom: 40px;
+.tabs p {
+  color: rgba(0, 0, 0, 0.5);
+}
+.tabs h2 {
+  margin-bottom: 1rem;
   color: #f2a341;
 }
-.tabs .tab-content > div.active .plecare p {
+.tabs .plecare p {
   color: black;
   padding-bottom: 10px;
   padding-top: 10px;
 }
-.tabs .tab-content > div.active .plecare select {
+.tabs .plecare select {
   width: 300px;
+  height: 40px;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0.5rem;
+  color: rgba(0, 0, 0, 0.5);
 }
-.tabs .tab-content > div button {
-  margin-top: 1rem;
+.tabs .content {
+  text-align: center;
+  padding: 40px 10px;
+}
+.tabs .content.show {
+  display: block;
+}
+.tabs .content button {
+  margin-top: 2rem;
   background-color: #f24b26;
   color: #fff;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   border: 0;
   border-radius: 0.3rem;
+}
+.tabs .content button:hover {
+  background-color: rgb(221, 2, 2);
+}
+.tabs .content button button {
+  width: 8rem;
+  cursor: pointer;
+}
+.tabs .content .contactInfo {
+  display: inline-flex;
+  padding: 0.5rem 0;
+  gap: 20px;
+}
+.tabs .content .contactInfo button {
+  width: 8rem;
+  cursor: pointer;
+}
+.tabs .content .contactInfo button:hover {
+  background-color: rgb(221, 2, 2);
 }/*# sourceMappingURL=style.css.map */
