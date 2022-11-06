@@ -110,8 +110,7 @@ body {
   flex-direction: row;
 
   & .tab-header {
-    float: left;
-    width: 180px;
+    min-width: 200px;
     height: 70%;
     border-right: 1px solid $grey;
     padding: 10% 0px;
@@ -146,9 +145,9 @@ body {
     }
 
     & > div {
-      position: absolute;
+      position: relative;
       text-align: center;
-      padding: 40px 20px;
+      padding: 40px 10px;
       top: -200%;
 
       &.active {
